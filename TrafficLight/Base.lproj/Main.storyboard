@@ -19,7 +19,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="roq-ok-Oqa">
                                 <rect key="frame" x="146.66666666666666" y="89" width="100" height="360"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VkS-xf-ODW">
+                                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VkS-xf-ODW">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                         <color key="backgroundColor" systemColor="systemRedColor"/>
                                         <constraints>
@@ -27,7 +27,7 @@
                                             <constraint firstAttribute="width" constant="100" id="q5W-Yk-sug"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QxA-gv-X8f">
+                                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QxA-gv-X8f">
                                         <rect key="frame" x="0.0" y="130" width="100" height="100"/>
                                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                                         <constraints>
@@ -35,7 +35,7 @@
                                             <constraint firstAttribute="width" constant="100" id="laV-30-9Ya"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JX7-P8-adb">
+                                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JX7-P8-adb">
                                         <rect key="frame" x="0.0" y="260" width="100" height="100"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                         <constraints>
@@ -56,6 +56,9 @@
                                 <state key="normal" title="START">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="switchTrafficLightButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="JHS-yV-RFv"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -68,6 +71,12 @@
                             <constraint firstItem="wuk-1L-2fa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nzu-5R-1kD"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greenTrafficLightView" destination="JX7-P8-adb" id="1o7-cl-ZH0"/>
+                        <outlet property="redTrafficLightView" destination="VkS-xf-ODW" id="xWI-pu-4OA"/>
+                        <outlet property="trafficLightButton" destination="wuk-1L-2fa" id="FGi-di-weh"/>
+                        <outlet property="yellowTrafficLightView" destination="QxA-gv-X8f" id="OEj-bD-Tjl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
